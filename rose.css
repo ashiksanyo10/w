@@ -572,7 +572,7 @@ html, body {
 .text-above-rose {
     position: fixed;
     top: 170px; /* Adjust the top position as needed */
-    right: 580px; /* Align with the right position of the button */
+    right: 780px; /* Align with the right position of the button */
     font-size: 25px;
     color: #ffffff; /* Adjust the text color as needed */
 }
