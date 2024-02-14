@@ -33,14 +33,14 @@ new Vue({
             url: "https://youtu.be/gk2fKTitijs",
             favorited: true
           },
-          {
-            name: "Bloom",
-            artist: "Dabin, Dia Frampton",
-            cover: "https://raw.githubusercontent.com/hafizmp/Music-Application/master/Assets/img/bloom_dabin.jpeg",
-            source: "https://raw.githubusercontent.com/hafizmp/Music-Application/master/Assets/music/Bloom.mp3",
-            url: "https://youtu.be/MVvclgDMtps",
-            favorited: false
-          },
+          // {
+          //   name: "Bloom",
+          //   artist: "Dabin, Dia Frampton",
+          //   cover: "https://raw.githubusercontent.com/hafizmp/Music-Application/master/Assets/img/bloom_dabin.jpeg",
+          //   source: "https://raw.githubusercontent.com/hafizmp/Music-Application/master/Assets/music/Bloom.mp3",
+          //   url: "https://youtu.be/MVvclgDMtps",
+          //   favorited: false
+          // },
           {
             name: "Falling",
             artist: "Trever Daniel",
@@ -57,14 +57,14 @@ new Vue({
             url: "https://youtu.be/T94PHkuydcw",
             favorited: true
           },
-          {
-            name: "Love Is Gone - Acoustic",
-            artist: "SLANDER",
-            cover: "https://raw.githubusercontent.com/hafizmp/Music-Application/master/Assets/img/love_is_gone-acoustic.jpeg",
-            source: "https://raw.githubusercontent.com/hafizmp/Music-Application/master/Assets/music/Love_Is_Gone.mp3",
-            url: "https://youtu.be/hCrtcVDgCGw",
-            favorited: true
-          },
+          // {
+          //   name: "Love Is Gone - Acoustic",
+          //   artist: "SLANDER",
+          //   cover: "https://raw.githubusercontent.com/hafizmp/Music-Application/master/Assets/img/love_is_gone-acoustic.jpeg",
+          //   source: "https://raw.githubusercontent.com/hafizmp/Music-Application/master/Assets/music/Love_Is_Gone.mp3",
+          //   url: "https://youtu.be/hCrtcVDgCGw",
+          //   favorited: true
+          // },
           {
             name: "Saansein",
             artist: "Prateek Kuhad",
