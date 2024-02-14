@@ -25,14 +25,14 @@ new Vue({
             url: "https://youtu.be/AXnqkVTFUqY",
             favorited: false
           },
-          {
-            name: "Weak when ur around",
-            artist: "Blackbear",
-            cover: "https://raw.githubusercontent.com/hafizmp/Music-Application/master/Assets/img/blackbear.jpeg",
-            source: "https://raw.githubusercontent.com/hafizmp/Music-Application/master/Assets/music/Blackbear.mp3",
-            url: "https://youtu.be/gk2fKTitijs",
-            favorited: true
-          },
+          // {
+          //   name: "Weak when ur around",
+          //   artist: "Blackbear",
+          //   cover: "https://raw.githubusercontent.com/hafizmp/Music-Application/master/Assets/img/blackbear.jpeg",
+          //   source: "https://raw.githubusercontent.com/hafizmp/Music-Application/master/Assets/music/Blackbear.mp3",
+          //   url: "https://youtu.be/gk2fKTitijs",
+          //   favorited: true
+          // },
           // {
           //   name: "Bloom",
           //   artist: "Dabin, Dia Frampton",
