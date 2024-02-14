@@ -1,0 +1,148 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <meta charset="UTF-8" />
+        <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+        <title>Minnu for Cuite💖</title>
+        <link rel="stylesheet" href="./fire.css" />
+        <style>
+            body {
+                margin: 0;
+                overflow: hidden; /* Hide scroll bars */
+            }
+
+            .redirect-button {
+            position: fixed;
+            bottom: 10%; /* Adjust the distance from the bottom */
+            left: 50%;
+            transform: translateX(-50%);
+            padding: 10px 20px;
+            font-size: 16px;
+            background-color: #0444bb;
+            color: #fff;
+            border: none;
+            border-radius: 5px;
+            cursor: pointer;
+            z-index: 2; /* Ensure the button is above the canvas */
+            }
+
+            .redirect-button:hover {
+            background-color: #141e72;
+            color: white    ;
+            }
+        </style>
+    </head>
+    <body>
+        <canvas id="canvas"></canvas>
+        <button class="redirect-button" onclick="redirectToNewPage1()">lesgooo</button>
+    </body>
+</html>
+
+<script>
+    let c = init("canvas"),
+  w = (canvas.width = window.innerWidth),
+  h = (canvas.height = window.innerHeight);
+//initiation
+
+class firefly{
+  constructor(){
+    this.x = Math.random()*w;
+    this.y = Math.random()*h;
+    this.s = Math.random()*2;
+    this.ang = Math.random()*2*Math.PI;
+    this.v = this.s*this.s/4;
+  }
+  move(){
+    this.x += this.v*Math.cos(this.ang);
+    this.y += this.v*Math.sin(this.ang);
+    this.ang += Math.random()*20*Math.PI/180-10*Math.PI/180;
+  }
+  show(){
+    c.beginPath();
+    c.arc(this.x, this.y, this.s * 2, 0, 2 * Math.PI); // Increase the radius for a larger glow
+    c.fillStyle = "rgba(253, 219, 163, 0.5)"; // Adjust the alpha value for more transparency
+    c.fill();
+  }
+}
+
+let f = [];
+
+function draw() {
+  // Adjust the desired number of fireflies
+  const desiredFireflies = 150;
+
+  // Check if the current number of fireflies is less than the desired number
+  if (f.length < desiredFireflies) {
+    // Create and push additional fireflies
+    for (let j = 0; j < desiredFireflies - f.length; j++) {
+      f.push(new firefly());
+    }
+  }
+
+  // Animation
+  for (let i = 0; i < f.length; i++) {
+    f[i].move();
+    f[i].show();
+    if (f[i].x < 0 || f[i].x > w || f[i].y < 0 || f[i].y > h) {
+      f.splice(i, 1);
+    }
+  }
+}
+
+let mouse = {};
+let last_mouse = {};
+
+canvas.addEventListener(
+  "mousemove",
+  function(e) {
+    last_mouse.x = mouse.x;
+    last_mouse.y = mouse.y;
+
+    mouse.x = e.pageX - this.offsetLeft;
+    mouse.y = e.pageY - this.offsetTop;
+  },
+  false
+);
+function init(elemid) {
+  let canvas = document.getElementById(elemid),
+    c = canvas.getContext("2d"),
+    w = (canvas.width = window.innerWidth),
+    h = (canvas.height = window.innerHeight);
+  c.fillStyle = "rgba(30,30,30,1)";
+  c.fillRect(0, 0, w, h);
+  return c;
+}
+
+window.requestAnimFrame = (function() {
+  return (
+    window.requestAnimationFrame ||
+    window.webkitRequestAnimationFrame ||
+    window.mozRequestAnimationFrame ||
+    window.oRequestAnimationFrame ||
+    window.msRequestAnimationFrame ||
+    function(callback) {
+      window.setTimeout(callback);
+    }
+  );
+});
+
+function loop() {
+  window.requestAnimFrame(loop);
+  c.clearRect(0, 0, w, h);
+  draw();
+}
+
+window.addEventListener("resize", function() {
+  (w = canvas.width = window.innerWidth),
+  (h = canvas.height = window.innerHeight);
+  loop();
+});
+
+loop();
+setInterval(loop, 1000 / 60);
+
+function redirectToNewPage1() {
+    window.open('card.html', '_blank');
+}
+</script>
+</html>

@@ -1,0 +1,235 @@
+@import url("https://fonts.googleapis.com/css2?family=Poppins:wght@200;400;600&display=swap");
+
+* {
+    box-sizing: border-box;
+}
+
+body {
+    background-image: url("./images/snow.jpg");
+    background-size: cover;
+    background-position: center center;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    min-height: 100vh;
+    font-family: "Poppins", sans-serif;
+    margin: 0;
+}
+
+h1 {
+    font-weight: normal;
+    font-size: 4rem;
+    margin-top: 5rem;
+    color: white; /* Set font color to white */
+    text-shadow: 0 0 10px rgba(255, 255, 255, 0.8); /* Add glow effect */
+}
+
+.countdown-container {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+}
+
+.big-text {
+    font-weight: bold;
+    font-size: 6rem;
+    line-height: 1;
+    margin: 1rem 2rem;
+    color: white; /* Set font color to white */
+    text-shadow: 0 0 10px rgba(255, 255, 255, 0.8); /* Add glow effect */
+}
+
+.countdown-el {
+    text-align: center;
+}
+
+.countdown-el span {
+    font-size: 1.3rem;
+    color: white; /* Set font color to white */
+    text-shadow: 0 0 10px rgba(255, 255, 255, 0.8); /* Add glow effect */
+}
+
+.description {
+    margin-top: 50px;
+    font-size: 25px;
+    font-weight: 500;
+    color: white; /* Set font color to white */
+    text-shadow: 0 0 10px rgba(255, 255, 255, 0.8); /* Add glow effect */
+}
+
+.balls {
+    width: 4em;
+    display: flex;
+    flex-flow: row nowrap;
+    align-items: center;
+    justify-content: space-between;
+}
+
+.balls div {
+    width: 0.8em;
+    height: 0.8em;
+    border-radius: 50%;
+    background-color: #ffffff;
+}
+
+.balls div:nth-of-type(1) {
+    transform: translateX(-100%);
+    animation: left-swing 0.5s ease-in alternate infinite;
+}
+
+.balls div:nth-of-type(3) {
+    transform: translateX(-95%);
+    animation: right-swing 0.5s ease-out alternate infinite;
+}
+
+@keyframes left-swing {
+    50%,
+    100% {
+        transform: translateX(95%);
+    }
+}
+
+@keyframes right-swing {
+    50% {
+        transform: translateX(-95%);
+    }
+    100% {
+        transform: translateX(100%);
+    }
+}
+
+.redirect-button {
+    padding: 10px 20px;
+    font-size: 16px;
+    background-color: #0c0f0c;
+    color: #fff;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+}
+
+.redirect-button:hover {
+    background-color: #292929;
+}
+
+
+
+/* Add this to your existing CSS */
+
+body::before {
+  content: "";
+  background: url("./images/snow.jpg") center center / cover fixed;
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  filter: blur(2px); /* Adjust the blur value as needed */
+  z-index: -1;
+}
+
+body {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  min-height: 100vh;
+  font-family: "Poppins", sans-serif;
+  margin: 0;
+  position: relative;
+}
+
+h1,
+.big-text,
+.countdown-el span,
+.description {
+  color: white;
+  text-shadow: 0 0 10px rgba(255, 255, 255, 0.8);
+}
+
+h1 {
+  font-weight: normal;
+  font-size: 4rem;
+  margin-top: 5rem;
+}
+
+.countdown-container {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+}
+
+.big-text {
+  font-weight: bold;
+  font-size: 6rem;
+  line-height: 1;
+  margin: 1rem 2rem;
+}
+
+.countdown-el {
+  text-align: center;
+}
+
+.countdown-el span {
+  font-size: 1.3rem;
+}
+
+.description {
+  margin-top: 50px;
+  font-size: 25px;
+  font-weight: 500;
+}
+
+.balls {
+  width: 4em;
+  display: flex;
+  flex-flow: row nowrap;
+  align-items: center;
+  justify-content: space-between;
+}
+
+.balls div {
+  width: 0.8em;
+  height: 0.8em;
+  border-radius: 50%;
+  background-color: #ffffff;
+}
+
+.balls div:nth-of-type(1) {
+  transform: translateX(-100%);
+  animation: left-swing 0.5s ease-in alternate infinite;
+}
+
+.balls div:nth-of-type(3) {
+  transform: translateX(-95%);
+  animation: right-swing 0.5s ease-out alternate infinite;
+}
+
+@keyframes left-swing {
+  50%,
+  100% {
+      transform: translateX(95%);
+  }
+}
+
+@keyframes right-swing {
+  50% {
+      transform: translateX(-95%);
+  }
+  100% {
+      transform: translateX(100%);
+  }
+}
+
+.redirect-button {
+  padding: 10px 20px;
+  font-size: 16px;
+  background-color: #0c0f0c;
+  color: #fff;
+  border: none;
+  border-radius: 5px;
+  cursor: pointer;
+}
+
+.redirect-button:hover {
+  background-color: #292929;
+}
